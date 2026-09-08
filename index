@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Velmora Webworks | Global Digital Engineering & Enterprise Client Platform</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        deepBlack: '#05070b',
+                        cardDark: '#0d111a',
+                        cardHover: '#131926',
+                        accentBlue: '#0066ff',
+                        neonBlue: '#2563eb',
+                        glowCyan: '#38bdf8',
+                        borderSubtle: '#1f293d',
+                    },
+                    boxShadow: {
+                        'neon': '0 0 25px -5px rgba(0, 102, 255, 0.35)',
+                        'card-glow': '0 10px 30px -10px rgba(0, 0, 0, 0.7)'
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        h1, h2, h3, .font-space { font-family: 'Space Grotesk', sans-serif; }
+        .bg-grid-pattern {
+            background-size: 40px 40px;
+            background-image: linear-gradient(to right, rgba(31, 41, 61, 0.15) 1px, transparent 1px),
+                              linear-gradient(to bottom, rgba(31, 41, 61, 0.15) 1px, transparent 1px);
+        }
+        .metallic-text {
+            background: linear-gradient(135deg, #ffffff 0%, #94a3b8 50%, #e2e8f0 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .blue-glow-gradient {
+            background: radial-gradient(circle at center, rgba(0, 102, 255, 0.15) 0%, transparent 70%);
+        }
+    </style>
+</head>
+<body class="bg-deepBlack text-gray-100 min-h-screen flex flex-col selection:bg-accentBlue selection:text-white antialiased">
+
+    <!-- Top Announcement Bar -->
+    <div class="bg-gradient-to-r from-blue-950 via-deepBlack to-blue-950 border-b border-borderSubtle text-xs py-2 px-4 text-center text-gray-300 font-medium tracking-wide">
+        🚀 Global Digital Delivery: Scalable Enterprise Solutions &bull; <a href="#portal" class="text-glowCyan underline hover:text-white transition">Access Client Hub</a>
+    </div>
+
+    <!-- Header / Navigation -->
+    <header class="sticky top-0 z-50 bg-deepBlack/90 backdrop-blur-xl border-b border-borderSubtle">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="#" class="flex items-center space-x-3 group">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-blue-600 via-accentBlue to-deepBlack border border-glowCyan/30 flex items-center justify-center font-bold text-xl text-white shadow-neon group-hover:scale-105 transition">
+                    V
+                </div>
+                <div class="flex flex-col">
+                    <span class="font-space font-bold tracking-wider text-base uppercase metallic-text">Velmora</span>
+                    <span class="text-[10px] tracking-[0.25em] text-glowCyan font-semibold uppercase -mt-1">Webworks</span>
+                </div>
+            </a>
+            
+            <nav class="hidden lg:flex items-center space-x-8 text-sm font-medium text-gray-300">
+                <a href="#overview" class="hover:text-glowCyan transition">Overview</a>
+                <a href="#services" class="hover:text-glowCyan transition">Services</a>
+                <a href="#pricing" class="hover:text-glowCyan transition">Market Pricing</a>
+                <a href="#portal" class="hover:text-glowCyan transition">Client Portal</a>
+                <a href="#contact" class="hover:text-glowCyan transition">Contact</a>
+            </nav>
+
+            <div class="flex items-center space-x-4">
+                <button onclick="openModal('loginModal')" class="hidden sm:inline-flex items-center space-x-2 text-xs font-semibold px-4 py-2 rounded-xl bg-cardDark border border-borderSubtle hover:border-glowCyan/50 transition">
+                    <span>Client Login</span>
+                </button>
+                <button onclick="openModal('onboardModal')" class="bg-accentBlue hover:bg-blue-600 text-white px-5 py-2.5 rounded-xl font-semibold text-xs uppercase tracking-wider shadow-neon transition transform hover:-translate-y-0.5">
+                    Start Project
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section matching Logo Theme -->
+    <section class="relative overflow-hidden pt-28 pb-24 lg:pt-36 lg:pb-32 bg-grid-pattern border-b border-borderSubtle">
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] blue-glow-gradient rounded-full blur-3xl pointer-events-none -z-10"></div>
+        
+        <div class="max-w-7xl mx-auto px-6 text-center relative z-10">
+            <div class="inline-flex items-center space-x-3 px-4 py-2 rounded-full text-xs font-semibold bg-blue-950/40 text-glowCyan border border-blue-500/30 mb-8 shadow-sm">
+                <span class="w-2 h-2 rounded-full bg-glowCyan animate-ping"></span>
+                <span>WEBSITES &bull; BRANDS &bull; SOLUTIONS &bull; IDEAS &bull; CODE &bull; IMPACT</span>
+            </div>
+            
+            <h1 class="text-4xl md:text-6xl lg:text-7xl font-extrabold tracking-tight max-w-5xl mx-auto leading-[1.1] mb-6">
+                Build Your Presence. <br><span class="metallic-text">Grow Your Business.</span>
+            </h1>
+            
+            <p class="text-base md:text-lg text-gray-400 max-w-2xl mx-auto mb-10 font-normal leading-relaxed">
+                Velmora Webworks delivers high-performance global web infrastructure, world-class UI/UX execution, and an intuitive client command center for transparent tracking & payments.
+            </p>
+
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
+                <a href="#pricing" class="w-full sm:w-auto bg-accentBlue hover:bg-blue-600 text-white font-semibold px-8 py-4 rounded-xl shadow-neon transition text-sm uppercase tracking-wider">
+                    View Market Plans
+                </a>
+                <a href="#portal" class="w-full sm:w-auto bg-cardDark hover:bg-cardHover border border-borderSubtle text-gray-300 font-semibold px-8 py-4 rounded-xl transition text-sm uppercase tracking-wider">
+                    Explore Client Portal
+                </a>
+            </div>
+
+            <!-- Core Feature Quick Bar -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto pt-8 border-t border-borderSubtle/60 text-center">
+                <div class="p-3">
+                    <div class="text-glowCyan font-space font-bold text-lg">MODERN</div>
+                    <div class="text-xs text-gray-500 uppercase tracking-widest mt-1">Web Architecture</div>
+                </div>
+                <div class="p-3">
+                    <div class="text-glowCyan font-space font-bold text-lg">SCALABLE</div>
+                    <div class="text-xs text-gray-500 uppercase tracking-widest mt-1">Global Delivery</div>
+                </div>
+                <div class="p-3">
+                    <div class="text-glowCyan font-space font-bold text-lg">SECURE</div>
+                    <div class="text-xs text-gray-500 uppercase tracking-widest mt-1">Milestone Escrow</div>
+                </div>
+                <div class="p-3">
+                    <div class="text-glowCyan font-space font-bold text-lg">RESULTS</div>
+                    <div class="text-xs text-gray-500 uppercase tracking-widest mt-1">Driven Execution</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Detailed Services Section -->
+    <section id="services" class="py-24 max-w-7xl mx-auto px-6">
+        <div class="text-center mb-16">
+            <span class="text-xs font-semibold uppercase tracking-[0.2em] text-glowCyan">Capabilities</span>
+            <h2 class="text-3xl md:text-4xl font-bold tracking-tight mt-2 mb-4">Engineering Core Competencies</h2>
+            <p class="text-gray-400 max-w-xl mx-auto text-sm">Providing robust enterprise-grade solutions tailored for international standards.</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <!-- Service 1 -->
+            <div class="bg-cardDark p-8 rounded-2xl border border-borderSubtle hover:border-glowCyan/50 transition group flex flex-col justify-between shadow-card-glow">
+                <div>
+                    <div class="w-12 h-12 rounded-xl bg-blue-950/50 border border-blue-500/20 text-glowCyan flex items-center justify-center font-bold text-lg mb-6 group-hover:scale-110 transition">
+                        🖥️
+                    </div>
+                    <h3 class="font-space font-bold text-lg mb-3">Websites & Portals</h3>
+                    <p class="text-gray-400 text-xs leading-relaxed mb-6">High-speed web solutions built with modern component architectures, optimized for maximum global SEO performance.</p>
+                </div>
+                <span class="text-[11px] font-semibold text-glowCyan uppercase tracking-widest">Custom Stacks &rarr;</span>
+            </div>
+
+            <!-- Service 2 -->
+            <div class="bg-cardDark p-8 rounded-2xl border border-borderSubtle hover:border-glowCyan/50 transition group flex flex-col justify-between shadow-card-glow">
+                <div>
+                    <div class="w-12 h-12 rounded-xl bg-blue-950/50 border border-blue-500/20 text-glowCyan flex items-center justify-center font-bold text-lg mb-6 group-hover:scale-110 transition">
+                        ⚡
+                    </div>
+                    <h3 class="font-space font-bold text-lg mb-3">Custom Development</h3>
+                    <p class="text-gray-400 text-xs leading-relaxed mb-6">Full-stack web applications, custom API integrations, backend middleware, and lightning-fast database structures.</p>
+                </div>
+                <span class="text-[11px] font-semibold text-glowCyan uppercase tracking-widest">Full-Stack &rarr;</span>
+            </div>
+
+            <!-- Service 3 -->
+            <div class="bg-cardDark p-8 rounded-2xl border border-borderSubtle hover:border-glowCyan/50 transition group flex flex-col justify-between shadow-card-glow">
+                <div>
+                    <div class="w-12 h-12 rounded-xl bg-blue-950/50 border border-blue-500/20 text-glowCyan flex items-center justify-center font-bold text-lg mb-6 group-hover:scale-110 transition">
+                        🛒
+                    </div>
+                    <h3 class="font-space font-bold text-lg mb-3">E-Commerce Platforms</h3>
+                    <p class="text-gray-400 text-xs leading-relaxed mb-6">Scalable global shops supporting multi-currency checkouts, secure gateways, and high-conversion UI workflows.</p>
+                </div>
+                <span class="text-[11px] font-semibold text-glowCyan uppercase tracking-widest">Global Pay &rarr;</span>
+            </div>
+
+            <!-- Service 4 -->
+            <div class="bg-cardDark p-8 rounded-2xl border border-borderSubtle hover:border-glowCyan/50 transition group flex flex-col justify-between shadow-card-glow">
+                <div>
+                    <div class="w-12 h-12 rounded-xl bg-blue-950/50 border border-blue-500/20 text-glowCyan flex items-center justify-center font-bold text-lg mb-6 group-hover:scale-110 transition">
+                        🛡️
+                    </div>
+                    <h3 class="font-space font-bold text-lg mb-3">Maintenance & SLA</h3>
+                    <p class="text-gray-400 text-xs leading-relaxed mb-6">Continuous uptime monitoring, security audits, dependency updates, and dedicated 24/7 technical support response.</p>
+                </div>
+                <span class="text-[11px] font-semibold text-glowCyan uppercase tracking-widest">SLA Backed &rarr;</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Market Pricing Plans Section -->
+    <section id="pricing" class="py-24 bg-cardDark/40 border-y border-borderSubtle relative">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <span class="text-xs font-semibold uppercase tracking-[0.2em] text-glowCyan">Investment Tiers</span>
+                <h2 class="text-3xl md:text-4xl font-bold tracking-tight mt-2 mb-4">Market-Aligned Pricing Plans</h2>
+                <p class="text-gray-400 max-w-xl mx-auto text-sm">Flexible tier options engineered to match current digital market economics with transparent billing structures.</p>
+            </div>
+
+            <div class="grid lg:grid-cols-3 gap-8 items-stretch">
+                <!-- Plan 1: Starter -->
+                <div class="bg-cardDark p-8 rounded-3xl border border-borderSubtle flex flex-col justify-between">
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-xs font-bold uppercase tracking-wider text-gray-400">Starter Venture</span>
+                            <span class="text-[10px] bg-gray-800 text-gray-300 px-2.5 py-1 rounded-md font-mono">Standard</span>
+                        </div>
+                        <div class="mb-6">
+                            <span class="text-4xl font-space font-extrabold">$1,499</span>
+                            <span class="text-gray-400 text-xs"> USD / project</span>
+                        </div>
+                        <p class="text-xs text-gray-400 mb-6 leading-relaxed">Perfect for startups, independent professionals, and localized corporate branding pages.</p>
+                        <div class="space-y-3 text-xs text-gray-300 mb-8">
+                            <div class="flex items-center"><span class="text-glowCyan mr-2 font-bold">✓</span> Up to 5 Responsive Custom Pages</div>
+                            <div class="flex items-center"><span class="text-glowCyan mr-2 font-bold">✓</span> Basic On-Page Global SEO Setup</div>
+                            <div class="flex items-center"><span class="text-glowCyan mr-2 font-bold">✓</span> Standard Client Portal Dashboard Access</div>
+                            <div class="flex items-center"><span class="text-glowCyan mr-2 font-bold">✓</span> 2-Week Engineering Timeline</div>
+                            <div class="flex items-center"><span class="text-gray-600 mr-2 font-bold">✕</span> Advanced API Integration</div>
+                        </div>
+                    </div>
+                    <button onclick="selectPackage('Starter Venture', '$1,499')" class="w-full bg-gray-800 hover:bg-gray-700 font-semibold py-3 rounded-xl transition text-xs uppercase tracking-wider">
+                        Select Starter Plan
+                    </button>
+                </div>
+
+                <!-- Plan 2: Professional (Featured) -->
+                <div class="bg-cardDark p-8 rounded-3xl border-2 border-accentBlue relative flex flex-col justify-between shadow-neon">
+                    <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-accentBlue text-white text-[10px] font-bold uppercase tracking-widest px-4 py-1 rounded-full shadow-md">
+                        Most Popular Choice
+                    </div>
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-xs font-bold uppercase tracking-wider text-glowCyan">Growth Enterprise</span>
+                            <span class="text-[10px] bg-blue-950 text-glowCyan border border-blue-500/30 px-2.5 py-1 rounded-md font-mono">Recommended</span>
+                        </div>
+                        <div class="mb-6">
+                            <span class="text-4xl font-space font-extrabold">$3,899</span>
+                            <span class="text-gray-400 text-xs"> USD / project</span>
+                        </div>
+                        <p class="text-xs text-gray-400 mb-6 leading-relaxed">Comprehensive digital architecture for expanding companies requiring complex features and e-commerce setups.</p>
+                        <div class="space-y-3 text-xs text-gray-300 mb-8">
+                            <div class="flex items-center"><span class="text-glowCyan mr-2 font-bold">✓</span> Up to 15 Dynamic Custom Pages</div>
+                            <div class="flex items-center"><span class="text-glowCyan mr-2 font-bold">✓</span> Full E-Commerce / CMS Integration</div>
+                            <div class="flex items-center"><span class="text-glowCyan mr-2 font-bold">✓</span> Live Milestone Project Tracker Portal</div>
+                            <div class="flex items-center"><span class="text-glowCyan mr-2 font-bold">✓</span> Multi-Currency & Global Gateway Support</div>
+                            <div class="flex items-center"><span class="text-glowCyan mr-2 font-bold">✓</span> 4-Week Turnaround with Priority QA</div>
+                        </div>
+                    </div>
+                    <button onclick="selectPackage('Growth Enterprise', '$3,899')" class="w-full bg-accentBlue hover:bg-blue-600 text-white font-semibold py-3 rounded-xl transition text-xs uppercase tracking-wider shadow-neon">
+                        Select Growth Plan
+                    </button>
+                </div>
+
+                <!-- Plan 3: Corporate Custom -->
+                <div class="bg-cardDark p-8 rounded-3xl border border-borderSubtle flex flex-col justify-between">
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-xs font-bold uppercase tracking-wider text-purple-400">Corporate Custom</span>
+                            <span class="text-[10px] bg-purple-950 text-purple-300 px-2.5 py-1 rounded-md font-mono">Tailored</span>
+                        </div>
+                        <div class="mb-6">
+                            <span class="text-4xl font-space font-extrabold">Custom</span>
+                            <span class="text-gray-400 text-xs"> / scope based</span>
+                        </div>
+                        <p class="text-xs text-gray-400 mb-6 leading-relaxed">Tailored large-scale applications, custom microservices, and dedicated corporate SLA requirements.</p>
+                        <div class="space-y-3 text-xs text-gray-300 mb-8">
+                            <div class="flex items-center"><span class="text-purple-400 mr-2 font-bold">✓</span> Unlimited Scalable Architecture</div>
+                            <div class="flex items-center"><span class="text-purple-400 mr-2 font-bold">✓</span> Dedicated Senior Project Manager</div>
+                            <div class="flex items-center"><span class="text-purple-400 mr-2 font-bold">✓</span> Bespoke Middleware & Custom Code</div>
+                            <div class="flex items-center"><span class="text-purple-400 mr-2 font-bold">✓</span> 24/7 Priority Emergency Maintenance SLA</div>
+                        </div>
+                    </div>
+                    <button onclick="openModal('onboardModal')" class="w-full bg-gray-800 hover:bg-gray-700 font-semibold py-3 rounded-xl transition text-xs uppercase tracking-wider">
+                        Consult Corporate Sales
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Client Hub & Tracker Interactive Simulation Section -->
+    <section id="portal" class="py-24 max-w-7xl mx-auto px-6">
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+                <span class="text-xs font-semibold uppercase tracking-[0.2em] text-glowCyan">Client Command Center</span>
+                <h2 class="text-3xl md:text-4xl font-bold tracking-tight mt-2 mb-6">Total Project Transparency & Control</h2>
+                <p class="text-gray-400 text-sm leading-relaxed mb-6">
+                    Velmora Webworks eliminates communication black holes. Once your project is initiated, your dedicated client workspace gives you real-time tracking across every software development lifecycle stage.
+                </p>
+                <div class="space-y-4">
+                    <div class="flex items-start space-x-3">
+                        <div class="w-5 h-5 rounded-full bg-blue-950 text-glowCyan border border-blue-500/30 flex items-center justify-center text-xs font-bold mt-0.5">✓</div>
+                        <div>
+                            <h4 class="font-space font-semibold text-sm">Real-Time Milestone Progress Bars</h4>
+                            <p class="text-xs text-gray-400">Track exact progression from initial wireframe design to final QA deployment.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start space-x-3">
+                        <div class="w-5 h-5 rounded-full bg-blue-950 text-glowCyan border border-blue-500/30 flex items-center justify-center text-xs font-bold mt-0.5">✓</div>
+                        <div>
+                            <h4 class="font-space font-semibold text-sm">Secure Payment Gateways & Invoices</h4>
+                            <p class="text-xs text-gray-400">Manage milestone payments securely using global card processors, multi-currency conversion, and downloadable VAT invoices.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-8 flex items-center space-x-4">
+                    <button onclick="openModal('loginModal')" class="bg-accentBlue hover:bg-blue-600 text-white text-xs font-semibold px-6 py-3 rounded-xl uppercase tracking-wider shadow-neon transition">
+                        Open Portal Login
+                    </button>
+                </div>
+            </div>
+
+            <!-- Simulated Client Dashboard Card UI -->
+            <div class="bg-cardDark p-6 sm:p-8 rounded-3xl border border-borderSubtle shadow-2xl relative overflow-hidden">
+                <div class="absolute top-0 right-0 w-32 h-32 blue-glow-gradient rounded-full blur-2xl pointer-events-none"></div>
+                
+                <div class="flex justify-between items-center pb-4 mb-6 border-b border-borderSubtle">
+                    <div>
+                        <span class="text-[10px] font-mono text-gray-500">PROJECT ID: #VW-9942-GL</span>
+                        <h3 class="font-space font-bold text-base text-white">Global Corporate Platform Rebrand</h3>
+                    </div>
+                    <span class="px-3 py-1 rounded-full bg-blue-950/80 text-glowCyan text-[10px] font-bold border border-blue-500/30 uppercase tracking-widest">Active Development</span>
+                </div>
+
+                <!-- Milestone Trackers -->
+                <div class="space-y-5 mb-8">
+                    <div>
+                        <div class="flex justify-between text-xs mb-1.5 font-medium">
+                            <span class="text-gray-300">1. Discovery & Architecture Scope</span>
+                            <span class="text-emerald-400 font-semibold">100% Completed</span>
+                        </div>
+                        <div class="w-full bg-gray-900 h-2 rounded-full overflow-hidden border border-borderSubtle">
+                            <div class="bg-emerald-500 h-full w-full"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between text-xs mb-1.5 font-medium">
+                            <span class="text-gray-300">2. UI/UX Wireframing & Design Tokens</span>
+                            <span class="text-emerald-400 font-semibold">100% Completed</span>
+                        </div>
+                        <div class="w-full bg-gray-900 h-2 rounded-full overflow-hidden border border-borderSubtle">
+                            <div class="bg-emerald-500 h-full w-full"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between text-xs mb-1.5 font-medium">
+                            <span class="text-gray-300">3. Full-Stack Engineering & API Integration</span>
+                            <span class="text-glowCyan font-semibold">65% In Progress</span>
+                        </div>
+                        <div class="w-full bg-gray-900 h-2 rounded-full overflow-hidden border border-borderSubtle">
+                            <div class="bg-accentBlue h-full w-[65%] shadow-neon"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between text-xs mb-1.5 font-medium text-gray-500">
+                            <span>4. Global Deployment & QA Security Audit</span>
+                            <span>Pending</span>
+                        </div>
+                        <div class="w-full bg-gray-900 h-2 rounded-full overflow-hidden border border-borderSubtle">
+                            <div class="bg-gray-700 h-full w-0"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Simulated Billing Status Box -->
+                <div class="bg-deepBlack/60 p-4 rounded-xl border border-borderSubtle flex items-center justify-between">
+                    <div>
+                        <span class="text-[10px] text-gray-500 uppercase tracking-wider">Next Milestone Payment</span>
+                        <div class="font-space font-bold text-sm text-white">$1,169.70 <span class="text-xs text-gray-400 font-normal">(Stage 3 Complete)</span></div>
+                    </div>
+                    <button onclick="alert('Redirecting to secure gateway simulator...')" class="bg-accentBlue hover:bg-blue-600 text-white text-[11px] font-semibold px-4 py-2 rounded-lg transition uppercase tracking-wider">
+                        Pay Securely
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Professional Global Contact Section -->
+    <section id="contact" class="py-24 bg-cardDark/40 border-t border-borderSubtle">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid lg:grid-cols-2 gap-12">
+                <div>
+                    <span class="text-xs font-semibold uppercase tracking-[0.2em] text-glowCyan">Get in Touch</span>
+                    <h2 class="text-3xl md:text-4xl font-bold tracking-tight mt-2 mb-6">Initiate Your Digital Project</h2>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-8">
+                        Our engineering consultants are ready to discuss your custom specifications. Contact Velmora Webworks directly via our verified global communication lines.
+                    </p>
+                    
+                    <div class="space-y-6 text-sm text-gray-300">
+                        <div class="flex items-center space-x-4 bg-cardDark p-4 rounded-xl border border-borderSubtle">
+                            <div class="w-10 h-10 rounded-lg bg-blue-950/60 text-glowCyan flex items-center justify-center font-bold">📞</div>
+                            <div>
+                                <span class="text-[10px] text-gray-500 uppercase tracking-widest block">Direct Hotline</span>
+                                <span class="font-space font-bold text-white text-base">+91 70017 74395</span>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-4 bg-cardDark p-4 rounded-xl border border-borderSubtle">
+                            <div class="w-10 h-10 rounded-lg bg-blue-950/60 text-glowCyan flex items-center justify-center font-bold">✉️</div>
+                            <div>
+                                <span class="text-[10px] text-gray-500 uppercase tracking-widest block">Corporate Inquiries</span>
+                                <span class="font-space font-bold text-white text-base">support@velmorawebworks.com</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="bg-cardDark p-8 rounded-3xl border border-borderSubtle shadow-card-glow">
+                    <h3 class="font-space font-bold text-lg mb-4">Request a Technical Consultation</h3>
+                    <form onsubmit="handleContactSubmit(event)" class="space-y-4">
+                        <div>
+                            <label class="block text-xs font-medium text-gray-400 mb-1">Full Name / Corporate Entity</label>
+                            <input type="text" required placeholder="John Doe (Acme Corp)" class="w-full bg-deepBlack border border-borderSubtle rounded-xl px-4 py-3 text-xs text-white focus:outline-none focus:border-glowCyan transition">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-medium text-gray-400 mb-1">Corporate Email Address</label>
+                            <input type="email" required placeholder="john@company.com" class="w-full bg-deepBlack border border-borderSubtle rounded-xl px-4 py-3 text-xs text-white focus:outline-none focus:border-glowCyan transition">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-medium text-gray-400 mb-1">Project Scope & Objectives</label>
+                            <textarea rows="4" required placeholder="Describe your web development requirements..." class="w-full bg-deepBlack border border-borderSubtle rounded-xl px-4 py-3 text-xs text-white focus:outline-none focus:border-glowCyan transition"></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-accentBlue hover:bg-blue-600 text-white font-semibold py-3.5 rounded-xl transition text-xs uppercase tracking-wider shadow-neon">
+                            Submit Project Brief
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Legal Wording & Comprehensive Footer -->
+    <footer class="bg-deepBlack border-t border-borderSubtle pt-16 pb-12">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
+                <!-- Col 1 -->
+                <div class="md:col-span-1">
+                    <div class="flex items-center space-x-3 mb-4">
+                        <div class="w-8 h-8 rounded-lg bg-accentBlue flex items-center justify-center font-bold text-white text-sm">V</div>
+                        <span class="font-space font-bold tracking-wider uppercase text-sm metallic-text">Velmora Webworks</span>
+                    </div>
+                    <p class="text-xs text-gray-500 leading-relaxed">
+                        Global digital engineering agency building superior website infrastructure, scalable platforms, and transparent client project management systems.
+                    </p>
+                </div>
+
+                <!-- Col 2 -->
+                <div>
+                    <h4 class="font-space font-semibold text-xs uppercase tracking-wider text-white mb-4">Navigation</h4>
+                    <ul class="space-y-2 text-xs text-gray-400">
+                        <li><a href="#overview" class="hover:text-glowCyan transition">Company Overview</a></li>
+                        <li><a href="#services" class="hover:text-glowCyan transition">Core Services</a></li>
+                        <li><a href="#pricing" class="hover:text-glowCyan transition">Market Pricing Plans</a></li>
+                        <li><a href="#portal" class="hover:text-glowCyan transition">Client Portal Tracker</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 3 -->
+                <div>
+                    <h4 class="font-space font-semibold text-xs uppercase tracking-wider text-white mb-4">Legal & Compliance</h4>
+                    <ul class="space-y-2 text-xs text-gray-400">
+                        <li><a href="#" onclick="openModal('termsModal')" class="hover:text-glowCyan transition">Terms of Service</a></li>
+                        <li><a href="#" onclick="openModal('privacyModal')" class="hover:text-glowCyan transition">Privacy & Data Policy</a></li>
+                        <li><a href="#" onclick="openModal('slaModal')" class="hover:text-glowCyan transition">Service Level Agreement (SLA)</a></li>
+                        <li><a href="#" onclick="openModal('refundModal')" class="hover:text-glowCyan transition">Refund & Billing Policy</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 4 -->
+                <div>
+                    <h4 class="font-space font-semibold text-xs uppercase tracking-wider text-white mb-4">Secure Contacts</h4>
+                    <p class="text-xs text-gray-400 mb-2 font-mono">Hotline: +91 70017 74395</p>
+                    <p class="text-xs text-gray-400 mb-4">Email: support@velmorawebworks.com</p>
+                    <div class="text-[10px] text-gray-500 uppercase tracking-widest bg-cardDark p-2.5 rounded-lg border border-borderSubtle">
+                        🔒 Global SSL Encrypted Architecture
+                    </div>
+                </div>
+            </div>
+
+            <!-- Legal Disclaimers & Copyright -->
+            <div class="border-t border-borderSubtle/60 pt-8 flex flex-col md:flex-row justify-between items-center text-[11px] text-gray-500 gap-4">
+                <p>&copy; 2026 Velmora Webworks. All rights reserved worldwide. Unauthorized replication of design architecture or trademarked assets is strictly prohibited.</p>
+                <div class="flex space-x-6">
+                    <span>Global Delivery Operations</span>
+                    <span>GDPR & CCPA Compliant</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modals (Login, Onboarding, Legal Popups) -->
+    <!-- Login Modal -->
+    <div id="loginModal" class="fixed inset-0 bg-black/80 backdrop-blur-md hidden items-center justify-center z-50 p-4">
+        <div class="bg-cardDark border border-borderSubtle rounded-3xl max-w-md w-full p-8 relative shadow-card-glow">
+            <button onclick="closeModal('loginModal')" class="absolute top-5 right-5 text-gray-400 hover:text-white text-lg">&times;</button>
+            <h3 class="font-space font-bold text-xl mb-1 text-white">Client Portal Login</h3>
+            <p class="text-xs text-gray-400 mb-6">Access your live development tracker and billing dashboard.</p>
+            <form onsubmit="handleLogin(event)" class="space-y-4">
+                <div>
+                    <label class="block text-xs font-medium text-gray-300 mb-1">Corporate Email</label>
+                    <input type="email" required placeholder="client@company.com" class="w-full bg-deepBlack border border-borderSubtle rounded-xl px-4 py-3 text-xs text-white focus:outline-none focus:border-glowCyan">
+                </div>
+                <div>
+                    <label class="block text-xs font-medium text-gray-300 mb-1">Secure Password</label>
+                    <input type="password" required placeholder="••••••••" class="w-full bg-deepBlack border border-borderSubtle rounded-xl px-4 py-3 text-xs text-white focus:outline-none focus:border-glowCyan">
+                </div>
+                <button type="submit" class="w-full bg-accentBlue hover:bg-blue-600 font-semibold py-3 rounded-xl transition text-xs uppercase tracking-wider text-white shadow-neon">
+                    Sign In to Dashboard
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Onboarding Modal -->
+    <div id="onboardModal" class="fixed inset-0 bg-black/80 backdrop-blur-md hidden items-center justify-center z-50 p-4">
+        <div class="bg-cardDark border border-borderSubtle rounded-3xl max-w-lg w-full p-8 relative shadow-card-glow">
+            <button onclick="closeModal('onboardModal')" class="absolute top-5 right-5 text-gray-400 hover:text-white text-lg">&times;</button>
+            <h3 class="font-space font-bold text-xl mb-1 text-white">Project Onboarding</h3>
+            <p class="text-xs text-gray-400 mb-6">Initialize your requirements with Velmora Webworks.</p>
+            <form onsubmit="handleOnboard(event)" class="space-y-4">
+                <div class="grid grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-xs font-medium text-gray-300 mb-1">Full Name</label>
+                        <input type="text" required placeholder="Jane Doe" class="w-full bg-deepBlack border border-borderSubtle rounded-xl px-3 py-2.5 text-xs text-white focus:outline-none focus:border-glowCyan">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-medium text-gray-300 mb-1">Phone / WhatsApp</label>
+                        <input type="text" required placeholder="+91 70017 74395" class="w-full bg-deepBlack border border-borderSubtle rounded-xl px-3 py-2.5 text-xs text-white focus:outline-none focus:border-glowCyan">
+                    </div>
+                </div>
+                <div>
+                    <label class="block text-xs font-medium text-gray-300 mb-1">Select Tier</label>
+                    <select id="modalPlanSelect" class="w-full bg-deepBlack border border-borderSubtle rounded-xl px-3 py-2.5 text-xs text-white focus:outline-none focus:border-glowCyan">
+                        <option value="Starter Venture ($1,499)">Starter Venture ($1,499)</option>
+                        <option value="Growth Enterprise ($3,899)">Growth Enterprise ($3,899)</option>
+                        <option value="Corporate Custom">Corporate Custom Scope</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="block text-xs font-medium text-gray-300 mb-1">Project Description & Timeline</label>
+                    <textarea rows="3" required placeholder="Tell us about your goals..." class="w-full bg-deepBlack border border-borderSubtle rounded-xl px-3 py-2.5 text-xs text-white focus:outline-none focus:border-glowCyan"></textarea>
+                </div>
+                <button type="submit" class="w-full bg-accentBlue hover:bg-blue-600 font-semibold py-3 rounded-xl transition text-xs uppercase tracking-wider text-white shadow-neon">
+                    Proceed to Secure Gateway
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Generic Legal Information Modal -->
+    <div id="legalModal" class="fixed inset-0 bg-black/80 backdrop-blur-md hidden items-center justify-center z-50 p-4">
+        <div class="bg-cardDark border border-borderSubtle rounded-3xl max-w-xl w-full p-8 relative shadow-card-glow max-h-[80vh] overflow-y-auto">
+            <button onclick="closeModal('legalModal')" class="absolute top-5 right-5 text-gray-400 hover:text-white text-lg">&times;</button>
+            <h3 id="legalTitle" class="font-space font-bold text-xl mb-4 text-white">Legal Information</h3>
+            <div id="legalContent" class="text-xs text-gray-300 space-y-3 leading-relaxed">
+                <!-- Dynamically filled legal text -->
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript Controllers -->
+    <script>
+        function openModal(modalId) {
+            const modal = document.getElementById(modalId);
+            if (modal) {
+                modal.classList.remove('hidden');
+                modal.classList.add('flex');
+            }
+        }
+
+        function closeModal(modalId) {
+            const modal = document.getElementById(modalId);
+            if (modal) {
+                modal.classList.remove('flex');
+                modal.classList.add('hidden');
+            }
+        }
+
+        function selectPackage(planName, price) {
+            const select = document.getElementById('modalPlanSelect');
+            if(select) {
+                for(let i=0; i<select.options.length; i++) {
+                    if(select.options[i].text.includes(planName)) {
+                        select.selectedIndex = i;
+                        break;
+                    }
+                }
+            }
+            openModal('onboardModal');
+        }
+
+        function handleLogin(e) {
+            e.preventDefault();
+            alert("Simulated authentication verified successfully! Redirecting to secure client milestone tracking portal.");
+            closeModal('loginModal');
+        }
+
+        function handleOnboard(e) {
+            e.preventDefault();
+            alert("Project brief successfully transmitted to Velmora Webworks team. Our manager will contact you via hotline +91 70017 74395 or email.");
+            closeModal('onboardModal');
+        }
+
+        function handleContactSubmit(e) {
+            e.preventDefault();
+            alert("Thank you! Your query has been logged under support reference #VW-CONTACT. We will respond shortly.");
+            e.target.reset();
+        }
+
+        // Legal texts handler
+        const legalTexts = {
+            termsModal: {
+                title: "Terms of Service & Engagement",
+                content: "1. Scope of Services: Velmora Webworks provides professional web development, UI/UX design, and e-commerce solutions globally.<br>2. Intellectual Property: Upon final clearance of all milestone payments, full ownership rights of the custom application source code transfer to the client.<br>3. Client Responsibilities: Clients agree to provide timely assets, copy, and feedback during active sprint phases to maintain delivery timelines."
+            },
+            privacyModal: {
+                title: "Privacy & Data Protection Policy",
+                content: "Velmora Webworks respects international data standards including GDPR and CCPA. Personal data, project details, and corporate communications are encrypted using secure SSL protocols and are never shared with unauthorized third-party marketing brokers."
+            },
+            slaModal: {
+                title: "Service Level Agreement (SLA)",
+                content: "For corporate maintenance plans, Velmora Webworks guarantees 99.9% network uptime for hosted web infrastructures. Critical support tickets submitted through the client portal are addressed within a guaranteed 4-hour window globally."
+            },
+            refundModal: {
+                title: "Refund & Billing Policy",
+                content: "Milestone payments correspond to completed development phases tracked transparently via the client portal. Deposits for discovery and initial scoping sprints are non-refundable once engineering work has officially commenced."
+            }
+        };
+
+        // Bind legal modal triggers
+        document.querySelectorAll('[onclick*="Modal"]').forEach(el => {
+            const attr = el.getAttribute('onclick');
+            if (attr && attr.includes('Modal') && attr !== 'openModal' && attr !== 'closeModal') {
+                el.onclick = (e) => {
+                    e.preventDefault();
+                    const match = attr.match(/'([^']+)'/);
+                    if (match && legalTexts[match[1]]) {
+                        document.getElementById('legalTitle').innerText = legalTexts[match[1]].title;
+                        document.getElementById('legalContent').innerHTML = legalTexts[match[1]].content;
+                        openModal('legalModal');
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
