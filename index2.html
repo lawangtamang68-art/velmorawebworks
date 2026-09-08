@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Velmora Webworks | Global Digital Engineering & Web Solutions</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        deepBlack: '#05070b',
+                        cardDark: '#0d111a',
+                        cardHover: '#131926',
+                        accentBlue: '#0066ff',
+                        neonBlue: '#2563eb',
+                        glowCyan: '#38bdf8',
+                        borderSubtle: '#1f293d',
+                    },
+                    boxShadow: {
+                        'neon': '0 0 25px -5px rgba(0, 102, 255, 0.35)',
+                        'card-glow': '0 10px 30px -10px rgba(0, 0, 0, 0.7)'
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        h1, h2, h3, .font-space { font-family: 'Space Grotesk', sans-serif; }
+        .bg-grid-pattern {
+            background-size: 40px 40px;
+            background-image: linear-gradient(to right, rgba(31, 41, 61, 0.15) 1px, transparent 1px),
+                              linear-gradient(to bottom, rgba(31, 41, 61, 0.15) 1px, transparent 1px);
+        }
+        .metallic-text {
+            background: linear-gradient(135deg, #ffffff 0%, #94a3b8 50%, #e2e8f0 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .blue-glow-gradient {
+            background: radial-gradient(circle at center, rgba(0, 102, 255, 0.15) 0%, transparent 70%);
+        }
+    </style>
+</head>
+<body class="bg-deepBlack text-gray-100 min-h-screen flex flex-col selection:bg-accentBlue selection:text-white antialiased">
+
+    <!-- Top Announcement Bar -->
+    <div class="bg-gradient-to-r from-blue-950 via-deepBlack to-blue-950 border-b border-borderSubtle text-xs py-2 px-4 text-center text-gray-300 font-medium tracking-wide">
+        🚀 Global Digital Delivery: Custom Engineering & Enterprise Web Architecture &bull; <a href="#contact" class="text-glowCyan underline hover:text-white transition">Get in Touch</a>
+    </div>
+
+    <!-- Header / Navigation -->
+    <header class="sticky top-0 z-50 bg-deepBlack/90 backdrop-blur-xl border-b border-borderSubtle">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="#" class="flex items-center space-x-3 group">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-blue-600 via-accentBlue to-deepBlack border border-glowCyan/30 flex items-center justify-center font-bold text-xl text-white shadow-neon group-hover:scale-105 transition">
+                    V
+                </div>
+                <div class="flex flex-col">
+                    <span class="font-space font-bold tracking-wider text-base uppercase metallic-text">Velmora</span>
+                    <span class="text-[10px] tracking-[0.25em] text-glowCyan font-semibold uppercase -mt-1">Webworks</span>
+                </div>
+            </a>
+            
+            <nav class="hidden lg:flex items-center space-x-8 text-sm font-medium text-gray-300">
+                <a href="#overview" class="hover:text-glowCyan transition">Overview</a>
+                <a href="#services" class="hover:text-glowCyan transition">Services</a>
+                <a href="#process" class="hover:text-glowCyan transition">Our Process</a>
+                <a href="#why-us" class="hover:text-glowCyan transition">Why Choose Us</a>
+                <a href="#contact" class="hover:text-glowCyan transition">Contact</a>
+            </nav>
+
+            <div class="flex items-center space-x-4">
+                <a href="#contact" class="bg-accentBlue hover:bg-blue-600 text-white px-5 py-2.5 rounded-xl font-semibold text-xs uppercase tracking-wider shadow-neon transition transform hover:-translate-y-0.5 inline-block">
+                    Start a Project
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="overview" class="relative overflow-hidden pt-28 pb-24 lg:pt-36 lg:pb-32 bg-grid-pattern border-b border-borderSubtle">
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] blue-glow-gradient rounded-full blur-3xl pointer-events-none -z-10"></div>
+        
+        <div class="max-w-7xl mx-auto px-6 text-center relative z-10">
+            <div class="inline-flex items-center space-x-3 px-4 py-2 rounded-full text-xs font-semibold bg-blue-950/40 text-glowCyan border border-blue-500/30 mb-8 shadow-sm">
+                <span class="w-2 h-2 rounded-full bg-glowCyan animate-ping"></span>
+                <span>WEBSITES &bull; BRANDS &bull; SOLUTIONS &bull; IDEAS &bull; CODE &bull; IMPACT</span>
+            </div>
+            
+            <h1 class="text-4xl md:text-6xl lg:text-7xl font-extrabold tracking-tight max-w-5xl mx-auto leading-[1.1] mb-6">
+                Build Your Presence. <br><span class="metallic-text">Grow Your Business.</span>
+            </h1>
+            
+            <p class="text-base md:text-lg text-gray-400 max-w-2xl mx-auto mb-10 font-normal leading-relaxed">
+                Velmora Webworks designs and engineers high-performance web applications, scalable platforms, and intuitive digital experiences tailored to propel modern organizations forward.
+            </p>
+
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
+                <a href="#services" class="w-full sm:w-auto bg-accentBlue hover:bg-blue-600 text-white font-semibold px-8 py-4 rounded-xl shadow-neon transition text-sm uppercase tracking-wider">
+                    Explore Capabilities
+                </a>
+                <a href="#contact" class="w-full sm:w-auto bg-cardDark hover:bg-cardHover border border-borderSubtle text-gray-300 font-semibold px-8 py-4 rounded-xl transition text-sm uppercase tracking-wider">
+                    Schedule a Consultation
+                </a>
+            </div>
+
+            <!-- Core Feature Quick Bar -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto pt-8 border-t border-borderSubtle/60 text-center">
+                <div class="p-3">
+                    <div class="text-glowCyan font-space font-bold text-lg">MODERN</div>
+                    <div class="text-xs text-gray-500 uppercase tracking-widest mt-1">Web Architecture</div>
+                </div>
+                <div class="p-3">
+                    <div class="text-glowCyan font-space font-bold text-lg">SCALABLE</div>
+                    <div class="text-xs text-gray-500 uppercase tracking-widest mt-1">Global Delivery</div>
+                </div>
+                <div class="p-3">
+                    <div class="text-glowCyan font-space font-bold text-lg">SECURE</div>
+                    <div class="text-xs text-gray-500 uppercase tracking-widest mt-1">Hardened Standards</div>
+                </div>
+                <div class="p-3">
+                    <div class="text-glowCyan font-space font-bold text-lg">RESULTS</div>
+                    <div class="text-xs text-gray-500 uppercase tracking-widest mt-1">Driven Execution</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-24 max-w-7xl mx-auto px-6">
+        <div class="text-center mb-16">
+            <span class="text-xs font-semibold uppercase tracking-[0.2em] text-glowCyan">Capabilities</span>
+            <h2 class="text-3xl md:text-4xl font-bold tracking-tight mt-2 mb-4">Engineering Core Competencies</h2>
+            <p class="text-gray-400 max-w-xl mx-auto text-sm">Providing robust enterprise-grade solutions tailored for international standards and rapid scale.</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <!-- Service 1 -->
+            <div class="bg-cardDark p-8 rounded-2xl border border-borderSubtle hover:border-glowCyan/50 transition group flex flex-col justify-between shadow-card-glow">
+                <div>
+                    <div class="w-12 h-12 rounded-xl bg-blue-950/50 border border-blue-500/20 text-glowCyan flex items-center justify-center font-bold text-lg mb-6 group-hover:scale-110 transition">
+                        🖥️
+                    </div>
+                    <h3 class="font-space font-bold text-lg mb-3">Websites & Portals</h3>
+                    <p class="text-gray-400 text-xs leading-relaxed mb-6">High-speed web platforms built with modern component frameworks, engineered for maximum responsiveness and search engine visibility.</p>
+                </div>
+                <span class="text-[11px] font-semibold text-glowCyan uppercase tracking-widest">Modern Stacks &rarr;</span>
+            </div>
+
+            <!-- Service 2 -->
+            <div class="bg-cardDark p-8 rounded-2xl border border-borderSubtle hover:border-glowCyan/50 transition group flex flex-col justify-between shadow-card-glow">
+                <div>
+                    <div class="w-12 h-12 rounded-xl bg-blue-950/50 border border-blue-500/20 text-glowCyan flex items-center justify-center font-bold text-lg mb-6 group-hover:scale-110 transition">
+                        ⚡
+                    </div>
+                    <h3 class="font-space font-bold text-lg mb-3">Custom Web Apps</h3>
+                    <p class="text-gray-400 text-xs leading-relaxed mb-6">Full-stack web applications, custom API integrations, cloud middleware, and optimized database structures built for high workloads.</p>
+                </div>
+                <span class="text-[11px] font-semibold text-glowCyan uppercase tracking-widest">Full-Stack &rarr;</span>
+            </div>
+
+            <!-- Service 3 -->
+            <div class="bg-cardDark p-8 rounded-2xl border border-borderSubtle hover:border-glowCyan/50 transition group flex flex-col justify-between shadow-card-glow">
+                <div>
+                    <div class="w-12 h-12 rounded-xl bg-blue-950/50 border border-blue-500/20 text-glowCyan flex items-center justify-center font-bold text-lg mb-6 group-hover:scale-110 transition">
+                        🛒
+                    </div>
+                    <h3 class="font-space font-bold text-lg mb-3">E-Commerce Platforms</h3>
+                    <p class="text-gray-400 text-xs leading-relaxed mb-6">Scalable commerce storefronts featuring frictionless checkout flows, headless CMS backbones, and multi-region payment systems.</p>
+                </div>
+                <span class="text-[11px] font-semibold text-glowCyan uppercase tracking-widest">Commerce Ready &rarr;</span>
+            </div>
+
+            <!-- Service 4 -->
+            <div class="bg-cardDark p-8 rounded-2xl border border-borderSubtle hover:border-glowCyan/50 transition group flex flex-col justify-between shadow-card-glow">
+                <div>
+                    <div class="w-12 h-12 rounded-xl bg-blue-950/50 border border-blue-500/20 text-glowCyan flex items-center justify-center font-bold text-lg mb-6 group-hover:scale-110 transition">
+                        🛡️
+                    </div>
+                    <h3 class="font-space font-bold text-lg mb-3">Cloud Infrastructure & SLA</h3>
+                    <p class="text-gray-400 text-xs leading-relaxed mb-6">Proactive uptime monitoring, multi-layered security audits, automated deployment pipelines, and responsive technical support.</p>
+                </div>
+                <span class="text-[11px] font-semibold text-glowCyan uppercase tracking-widest">Enterprise Support &rarr;</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Engineering Methodology Section -->
+    <section id="process" class="py-24 bg-cardDark/40 border-y border-borderSubtle relative">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <span class="text-xs font-semibold uppercase tracking-[0.2em] text-glowCyan">Methodology</span>
+                <h2 class="text-3xl md:text-4xl font-bold tracking-tight mt-2 mb-4">How We Build and Deliver</h2>
+                <p class="text-gray-400 max-w-xl mx-auto text-sm">A structured, engineering-first approach that ensures predictability, rapid delivery, and measurable business value.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-cardDark p-6 rounded-2xl border border-borderSubtle relative">
+                    <span class="text-4xl font-space font-extrabold text-blue-900/60 absolute top-4 right-6">01</span>
+                    <h3 class="font-space font-bold text-base text-white mb-2 mt-4">Discover & Scope</h3>
+                    <p class="text-xs text-gray-400 leading-relaxed">We analyze your business objectives, map technical requirements, and define system architecture before writing a single line of code.</p>
+                </div>
+
+                <div class="bg-cardDark p-6 rounded-2xl border border-borderSubtle relative">
+                    <span class="text-4xl font-space font-extrabold text-blue-900/60 absolute top-4 right-6">02</span>
+                    <h3 class="font-space font-bold text-base text-white mb-2 mt-4">Prototype & Design</h3>
+                    <p class="text-xs text-gray-400 leading-relaxed">Creating intuitive design systems, conversion-driven user interfaces, and interactive wireframes for stakeholder approval.</p>
+                </div>
+
+                <div class="bg-cardDark p-6 rounded-2xl border border-borderSubtle relative">
+                    <span class="text-4xl font-space font-extrabold text-blue-900/60 absolute top-4 right-6">03</span>
+                    <h3 class="font-space font-bold text-base text-white mb-2 mt-4">Full-Stack Build</h3>
+                    <p class="text-xs text-gray-400 leading-relaxed">Developing cleanly architected, secure code with continuous integration, automated test suites, and strict performance targets.</p>
+                </div>
+
+                <div class="bg-cardDark p-6 rounded-2xl border border-borderSubtle relative">
+                    <span class="text-4xl font-space font-extrabold text-blue-900/60 absolute top-4 right-6">04</span>
+                    <h3 class="font-space font-bold text-base text-white mb-2 mt-4">Deploy & Maintain</h3>
+                    <p class="text-xs text-gray-400 leading-relaxed">Conducting global edge deployments, multi-region CDN routing, security checks, and ongoing performance optimization.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us / Company Narrative -->
+    <section id="why-us" class="py-24 max-w-7xl mx-auto px-6">
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+                <span class="text-xs font-semibold uppercase tracking-[0.2em] text-glowCyan">Why Velmora</span>
+                <h2 class="text-3xl md:text-4xl font-bold tracking-tight mt-2 mb-6">Designed for Growth, Built to Endure</h2>
+                <p class="text-gray-400 text-sm leading-relaxed mb-6">
+                    In an increasingly noisy digital market, off-the-shelf templates rarely solve enterprise challenges. Velmora Webworks builds purpose-driven web experiences that reflect your company's ambition and deliver sustainable conversion.
+                </p>
+                <div class="space-y-4">
+                    <div class="flex items-start space-x-3">
+                        <div class="w-5 h-5 rounded-full bg-blue-950 text-glowCyan border border-blue-500/30 flex items-center justify-center text-xs font-bold mt-0.5">✓</div>
+                        <div>
+                            <h4 class="font-space font-semibold text-sm text-white">Full Intellectual Property Ownership</h4>
+                            <p class="text-xs text-gray-400">Zero platform lock-in. You retain 100% ownership of your application code, assets, and infrastructure configurations.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start space-x-3">
+                        <div class="w-5 h-5 rounded-full bg-blue-950 text-glowCyan border border-blue-500/30 flex items-center justify-center text-xs font-bold mt-0.5">✓</div>
+                        <div>
+                            <h4 class="font-space font-semibold text-sm text-white">Direct Technical Access</h4>
+                            <p class="text-xs text-gray-400">Collaborate directly with senior engineers and product designers rather than being routed through layers of account intermediaries.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start space-x-3">
+                        <div class="w-5 h-5 rounded-full bg-blue-950 text-glowCyan border border-blue-500/30 flex items-center justify-center text-xs font-bold mt-0.5">✓</div>
+                        <div>
+                            <h4 class="font-space font-semibold text-sm text-white">Global Performance by Default</h4>
+                            <p class="text-xs text-gray-400">High Core Web Vitals, accessible markup, and edge delivery setups ensure lightning-fast responsiveness worldwide.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stats / Highlights Box -->
+            <div class="bg-cardDark p-8 rounded-3xl border border-borderSubtle shadow-2xl relative overflow-hidden">
+                <div class="absolute top-0 right-0 w-32 h-32 blue-glow-gradient rounded-full blur-2xl pointer-events-none"></div>
+                <h3 class="font-space font-bold text-xl text-white mb-6">Engineering Benchmarks</h3>
+                
+                <div class="grid grid-cols-2 gap-6 mb-6">
+                    <div class="p-4 bg-deepBlack/60 rounded-xl border border-borderSubtle">
+                        <div class="text-3xl font-space font-extrabold text-glowCyan mb-1">99.9%</div>
+                        <div class="text-xs text-gray-400 uppercase tracking-wider">Uptime Reliability</div>
+                    </div>
+                    <div class="p-4 bg-deepBlack/60 rounded-xl border border-borderSubtle">
+                        <div class="text-3xl font-space font-extrabold text-glowCyan mb-1">&lt;100ms</div>
+                        <div class="text-xs text-gray-400 uppercase tracking-wider">Edge Latency Targets</div>
+                    </div>
+                    <div class="p-4 bg-deepBlack/60 rounded-xl border border-borderSubtle">
+                        <div class="text-3xl font-space font-extrabold text-glowCyan mb-1">100%</div>
+                        <div class="text-xs text-gray-400 uppercase tracking-wider">Clean Code Transfer</div>
+                    </div>
+                    <div class="p-4 bg-deepBlack/60 rounded-xl border border-borderSubtle">
+                        <div class="text-3xl font-space font-extrabold text-glowCyan mb-1">24/7</div>
+                        <div class="text-xs text-gray-400 uppercase tracking-wider">Critical SLA Available</div>
+                    </div>
+                </div>
+                
+                <p class="text-xs text-gray-400 leading-relaxed">
+                    Every product is rigorously profiled across device form factors, browsers, and network speeds to maintain top-tier UX metrics.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Professional Global Contact Section -->
+    <section id="contact" class="py-24 bg-cardDark/40 border-t border-borderSubtle">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid lg:grid-cols-2 gap-12">
+                <div>
+                    <span class="text-xs font-semibold uppercase tracking-[0.2em] text-glowCyan">Get in Touch</span>
+                    <h2 class="text-3xl md:text-4xl font-bold tracking-tight mt-2 mb-6">Initiate Your Digital Project</h2>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-8">
+                        Our engineering consultants are ready to discuss your custom specifications. Contact Velmora Webworks directly via our verified global communication lines or submit a project brief.
+                    </p>
+                    
+                    <div class="space-y-6 text-sm text-gray-300">
+                        <div class="flex items-center space-x-4 bg-cardDark p-4 rounded-xl border border-borderSubtle">
+                            <div class="w-10 h-10 rounded-lg bg-blue-950/60 text-glowCyan flex items-center justify-center font-bold">📞</div>
+                            <div>
+                                <span class="text-[10px] text-gray-500 uppercase tracking-widest block">Direct Hotline</span>
+                                <span class="font-space font-bold text-white text-base">+91 70017 74395</span>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-4 bg-cardDark p-4 rounded-xl border border-borderSubtle">
+                            <div class="w-10 h-10 rounded-lg bg-blue-950/60 text-glowCyan flex items-center justify-center font-bold">✉️</div>
+                            <div>
+                                <span class="text-[10px] text-gray-500 uppercase tracking-widest block">Corporate Inquiries</span>
+                                <span class="font-space font-bold text-white text-base">support@velmorawebworks.com</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="bg-cardDark p-8 rounded-3xl border border-borderSubtle shadow-card-glow">
+                    <h3 class="font-space font-bold text-lg mb-4">Request a Technical Consultation</h3>
+                    <form onsubmit="handleContactSubmit(event)" class="space-y-4">
+                        <div>
+                            <label class="block text-xs font-medium text-gray-400 mb-1">Full Name / Corporate Entity</label>
+                            <input type="text" required placeholder="John Doe (Acme Corp)" class="w-full bg-deepBlack border border-borderSubtle rounded-xl px-4 py-3 text-xs text-white focus:outline-none focus:border-glowCyan transition">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-medium text-gray-400 mb-1">Corporate Email Address</label>
+                            <input type="email" required placeholder="john@company.com" class="w-full bg-deepBlack border border-borderSubtle rounded-xl px-4 py-3 text-xs text-white focus:outline-none focus:border-glowCyan transition">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-medium text-gray-400 mb-1">Estimated Timeline / Project Type</label>
+                            <select class="w-full bg-deepBlack border border-borderSubtle rounded-xl px-4 py-3 text-xs text-white focus:outline-none focus:border-glowCyan transition">
+                                <option>Custom Web Application</option>
+                                <option>Corporate Marketing Website</option>
+                                <option>E-Commerce Platform</option>
+                                <option>Maintenance & Cloud Infrastructure</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-medium text-gray-400 mb-1">Project Scope & Objectives</label>
+                            <textarea rows="4" required placeholder="Describe your web development requirements and goals..." class="w-full bg-deepBlack border border-borderSubtle rounded-xl px-4 py-3 text-xs text-white focus:outline-none focus:border-glowCyan transition"></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-accentBlue hover:bg-blue-600 text-white font-semibold py-3.5 rounded-xl transition text-xs uppercase tracking-wider shadow-neon">
+                            Submit Project Brief
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comprehensive Footer -->
+    <footer class="bg-deepBlack border-t border-borderSubtle pt-16 pb-12">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
+                <!-- Col 1 -->
+                <div class="md:col-span-1">
+                    <div class="flex items-center space-x-3 mb-4">
+                        <div class="w-8 h-8 rounded-lg bg-accentBlue flex items-center justify-center font-bold text-white text-sm">V</div>
+                        <span class="font-space font-bold tracking-wider uppercase text-sm metallic-text">Velmora Webworks</span>
+                    </div>
+                    <p class="text-xs text-gray-500 leading-relaxed">
+                        Global digital engineering agency delivering resilient website infrastructure, bespoke software platforms, and forward-looking digital architecture.
+                    </p>
+                </div>
+
+                <!-- Col 2 -->
+                <div>
+                    <h4 class="font-space font-semibold text-xs uppercase tracking-wider text-white mb-4">Navigation</h4>
+                    <ul class="space-y-2 text-xs text-gray-400">
+                        <li><a href="#overview" class="hover:text-glowCyan transition">Company Overview</a></li>
+                        <li><a href="#services" class="hover:text-glowCyan transition">Core Services</a></li>
+                        <li><a href="#process" class="hover:text-glowCyan transition">Engineering Process</a></li>
+                        <li><a href="#why-us" class="hover:text-glowCyan transition">Why Choose Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 3 -->
+                <div>
+                    <h4 class="font-space font-semibold text-xs uppercase tracking-wider text-white mb-4">Legal & Compliance</h4>
+                    <ul class="space-y-2 text-xs text-gray-400">
+                        <li><a href="#" onclick="openLegal('termsModal')" class="hover:text-glowCyan transition">Terms of Service</a></li>
+                        <li><a href="#" onclick="openLegal('privacyModal')" class="hover:text-glowCyan transition">Privacy & Data Policy</a></li>
+                        <li><a href="#" onclick="openLegal('slaModal')" class="hover:text-glowCyan transition">Service Level Agreement (SLA)</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 4 -->
+                <div>
+                    <h4 class="font-space font-semibold text-xs uppercase tracking-wider text-white mb-4">Secure Contacts</h4>
+                    <p class="text-xs text-gray-400 mb-2 font-mono">Hotline: +91 70017 74395</p>
+                    <p class="text-xs text-gray-400 mb-4">Email: support@velmorawebworks.com</p>
+                    <div class="text-[10px] text-gray-500 uppercase tracking-widest bg-cardDark p-2.5 rounded-lg border border-borderSubtle">
+                        🔒 Global SSL Encrypted Architecture
+                    </div>
+                </div>
+            </div>
+
+            <!-- Legal Disclaimers & Copyright -->
+            <div class="border-t border-borderSubtle/60 pt-8 flex flex-col md:flex-row justify-between items-center text-[11px] text-gray-500 gap-4">
+                <p>&copy; 2026 Velmora Webworks. All rights reserved worldwide. Unauthorized replication of design architecture or trademarked assets is strictly prohibited.</p>
+                <div class="flex space-x-6">
+                    <span>Global Delivery Operations</span>
+                    <span>GDPR & CCPA Compliant</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Generic Legal Information Modal -->
+    <div id="legalModal" class="fixed inset-0 bg-black/80 backdrop-blur-md hidden items-center justify-center z-50 p-4">
+        <div class="bg-cardDark border border-borderSubtle rounded-3xl max-w-xl w-full p-8 relative shadow-card-glow max-h-[80vh] overflow-y-auto">
+            <button onclick="closeModal('legalModal')" class="absolute top-5 right-5 text-gray-400 hover:text-white text-lg">&times;</button>
+            <h3 id="legalTitle" class="font-space font-bold text-xl mb-4 text-white">Legal Information</h3>
+            <div id="legalContent" class="text-xs text-gray-300 space-y-3 leading-relaxed">
+                <!-- Dynamically filled legal text -->
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript Controllers -->
+    <script>
+        function openModal(modalId) {
+            const modal = document.getElementById(modalId);
+            if (modal) {
+                modal.classList.remove('hidden');
+                modal.classList.add('flex');
+            }
+        }
+
+        function closeModal(modalId) {
+            const modal = document.getElementById(modalId);
+            if (modal) {
+                modal.classList.remove('flex');
+                modal.classList.add('hidden');
+            }
+        }
+
+        function handleContactSubmit(e) {
+            e.preventDefault();
+            alert("Thank you! Your project inquiry has been received. Our engineering team will contact you shortly.");
+            e.target.reset();
+        }
+
+        const legalTexts = {
+            termsModal: {
+                title: "Terms of Service & Engagement",
+                content: "1. Scope of Services: Velmora Webworks delivers custom web development, UX/UI design, and cloud solutions.<br>2. Intellectual Property: Clients retain complete ownership of all custom deliverables and source code upon project completion.<br>3. Non-Disclosure: All client project details and corporate information are handled under strict confidentiality."
+            },
+            privacyModal: {
+                title: "Privacy & Data Protection Policy",
+                content: "Velmora Webworks strictly complies with international data privacy standards including GDPR and CCPA. We do not sell or broker corporate contact information, and all communications are encrypted over modern SSL connections."
+            },
+            slaModal: {
+                title: "Service Level Agreement (SLA)",
+                content: "For enterprise maintenance partnerships, Velmora Webworks maintains 99.9% uptime targets on deployed systems with direct engineering escalations for critical system alerts."
+            }
+        };
+
+        function openLegal(key) {
+            if (legalTexts[key]) {
+                document.getElementById('legalTitle').innerText = legalTexts[key].title;
+                document.getElementById('legalContent').innerHTML = legalTexts[key].content;
+                openModal('legalModal');
+            }
+        }
+    </script>
+</body>
+</html>
